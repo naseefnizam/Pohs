@@ -1,2 +1,0 @@
-# ShopUp
-Shopping App
