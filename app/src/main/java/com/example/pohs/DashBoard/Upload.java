@@ -1,9 +1,11 @@
-package com.example.pohs;
+package com.example.pohs.DashBoard;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+
+import com.example.pohs.R;
 
 public class Upload extends AppCompatActivity {
 

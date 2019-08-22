@@ -1,4 +1,4 @@
-package com.example.pohs;
+package com.example.pohs.DashBoard;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import com.example.pohs.R;
 
 
 public class CustomerDashBoard extends AppCompatActivity {

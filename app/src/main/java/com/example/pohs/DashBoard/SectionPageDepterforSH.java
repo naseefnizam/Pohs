@@ -1,4 +1,4 @@
-package com.example.pohs;
+package com.example.pohs.DashBoard;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

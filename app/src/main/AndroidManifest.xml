@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Upload"></activity>
-        <activity android:name=".ShopDashBoard" />
-        <activity android:name=".CustomerDashBoard" />
+        <activity android:name=".DashBoard.Upload"></activity>
+        <activity android:name=".DashBoard.ShopDashBoard" />
+        <activity android:name=".DashBoard.CustomerDashBoard" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DashBoard.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,8 +1,12 @@
-package com.example.pohs;
+package com.example.pohs.DashBoard;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.example.pohs.DashBoard.FemaleItems;
+import com.example.pohs.DashBoard.KidsItems;
+import com.example.pohs.DashBoard.MaleItems;
 
 class SectionPageDepterforCU extends FragmentPagerAdapter {
 

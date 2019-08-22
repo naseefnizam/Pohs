@@ -1,4 +1,4 @@
-package com.example.pohs;
+package com.example.pohs.DashBoard;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+
+import com.example.pohs.R;
 
 
 public class ShopDashBoard extends AppCompatActivity {
@@ -42,7 +44,7 @@ public class ShopDashBoard extends AppCompatActivity {
         muploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentup = new Intent(ShopDashBoard.this,Upload.class);
+                Intent intentup = new Intent(ShopDashBoard.this, Upload.class);
                 startActivity(intentup);
             }
         });
