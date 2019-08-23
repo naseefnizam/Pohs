@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@drawable/uploadbackground"
     tools:context=".DashBoard.Upload">
 
     <android.support.design.widget.AppBarLayout
@@ -21,73 +21,159 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <EditText
-        android:id="@+id/itemname"
-        android:layout_width="215dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_toEndOf="@+id/textView3"
-        android:ems="10"
-        android:hint="Dress Name"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="149dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="44dp"
-        android:text="Dress Name :"
-        android:textSize="18sp" />
-
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="402dp"
-        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="-2dp"
         android:text="UPLOAD ITEMS"
         android:textAlignment="center"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="Product Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="9dp"
+        android:ems="10"
+        android:hint="Product ID"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="Product Size"
+        android:inputType="textPersonName" />
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/dresstype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:hint=" Type"
+        android:textColor="#05ab9a"/>
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dresstype"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="Product Price"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText5"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description "
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/selectimagebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="9dp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:text="Select Image" />
+
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="119dp"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectimagebtn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="9dp"
+        android:hint="Photo Status" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="37dp"
-        android:layout_toStartOf="@+id/itemcode"
-        android:text="Item Code :"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/itemcode"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/itemname"
-        android:layout_alignStart="@+id/itemname"
-        android:layout_alignEnd="@+id/itemname"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="-3dp"
-        android:layout_marginBottom="488dp"
-        android:ems="10"
-        android:hint="Item Code"
-        android:inputType="textPersonName" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="53dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="upload"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="53dp"
+        android:layout_toEndOf="@+id/button2"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Cancel"
+        android:textColor="@android:color/background_light" />
+
 
 </RelativeLayout>
