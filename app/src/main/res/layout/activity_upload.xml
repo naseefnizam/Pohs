@@ -91,7 +91,7 @@
         android:layout_marginTop="23dp"
         android:layout_marginEnd="10dp"
         android:hint=" Type"
-        android:textColor="#05ab9a"/>
+        android:textColor="#05ab9a" />
 
     <EditText
         android:id="@+id/editText5"
@@ -122,58 +122,59 @@
 
     <Button
         android:id="@+id/selectimagebtn"
-        android:layout_width="match_parent"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText6"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="15dp"
         android:backgroundTint="@android:color/holo_blue_bright"
         android:text="Select Image" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/selectimagebtn"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="9dp"
-        android:hint="Photo Status" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="192dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginBottom="53dp"
+        android:layout_below="@+id/selectimagebtn"
+        android:layout_alignStart="@+id/selectimagebtn"
+        android:layout_alignEnd="@+id/selectimagebtn"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="-2dp"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text="upload"
         android:textColor="@android:color/background_light" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="192dp"
+        android:layout_width="188dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="53dp"
-        android:layout_toEndOf="@+id/button2"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="41dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="Cancel"
         android:textColor="@android:color/background_light" />
+
+    <ImageButton
+        android:id="@+id/imgbtn"
+        android:layout_width="190dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="207dp"
+        android:layout_marginBottom="42dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:onClick="imgbutton"/>
 
 
 </RelativeLayout>
