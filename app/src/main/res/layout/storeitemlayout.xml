@@ -121,7 +121,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
-        android:id="@+id/deletestore"
+        android:id="@+id/selectmale"
         android:layout_width="130dp"
         android:layout_height="38dp"
         android:layout_marginTop="12dp"
@@ -141,7 +141,7 @@
         android:text="Edit"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/deletestore"
+        app:layout_constraintEnd_toStartOf="@+id/selectmale"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/disc"
         app:layout_constraintTop_toBottomOf="@+id/disc" />

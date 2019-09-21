@@ -7,12 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.pohs.DashBoard.Modals.maleItemModal;
 import com.example.pohs.DashBoard.Modals.storeItemModal;
-import com.example.pohs.DashBoard.Store;
 import com.example.pohs.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class storeItemAdepter extends ArrayAdapter<storeItemModal> {
 

@@ -2,6 +2,7 @@ package com.example.pohs.DashBoard;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +13,19 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
+import com.example.pohs.DashBoard.Adepters.maleItemAdepter;
+import com.example.pohs.DashBoard.Adepters.storeItemAdepter;
+import com.example.pohs.DashBoard.Modals.maleItemModal;
 
+import com.example.pohs.DashBoard.Modals.storeItemModal;
 import com.example.pohs.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 
 /**
@@ -26,13 +38,46 @@ public class MaleItems extends Fragment {
         // Required empty public constructor
     }
 
+    private ListView storeList ;
+    ArrayList<maleItemModal> maleitem = new ArrayList<>();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        final View  views = inflater.inflate(R.layout.fragment_male_items,container,false);
+        final View  view = inflater.inflate(R.layout.fragment_male_items,container,false);
+
+        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("UploadItems");
+        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.hasChildren()){
+                    maleitem.clear();
+
+                    for (DataSnapshot ds : dataSnapshot.getChildren())
+                    {
+                        maleItemModal spacecraft=ds.getValue(maleItemModal.class);
+                        maleitem.add(spacecraft);
+                    }
+
+                   maleItemAdepter listAdapter = new maleItemAdepter(MaleItems.this.getContext(),R.id.MaleItemLV,maleitem);
+                    ListView list=(ListView)view.findViewById(R.id.MaleItemLV);
+                    list.setAdapter(listAdapter);
+
+
+//                    vegetables.add((Vegetables) dataSnapshot.getValue());
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
 
@@ -40,7 +85,7 @@ public class MaleItems extends Fragment {
 
 
 
-        return views;
+        return view;
     }
 
 
