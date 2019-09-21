@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/uploadbackground"
-    tools:context="DashBoard.Upload">
+    tools:context="com.example.pohs.DashBoard.Upload">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
