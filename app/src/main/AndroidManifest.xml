@@ -19,6 +19,8 @@
         <activity android:name=".DashBoard.ShopDashBoard" />
         <activity android:name=".DashBoard.CustomerDashBoard" />
         <activity android:name=".Login_register_profile.FirstPage"/>
+        <activity android:name=".Login_register_profile.LoginActivity"/>
+
         <activity
             android:name=".DashBoard.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
