@@ -31,7 +31,7 @@ public class Searchfirst extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Searchfirst.this,searchViewActivity.class);
-                intent.putExtra("searchText",searchtext.toString());
+                intent.putExtra("searchText",searchtext.getText().toString());
                 startActivity(intent);
             }
         });

@@ -1,10 +1,14 @@
 package com.example.pohs.DashBoard.Adepters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.pohs.DashBoard.Modals.UploadModal;
@@ -41,6 +45,20 @@ public class kidsItemAdepter extends ArrayAdapter<UploadModal> {
         TextView productDisc = (TextView) rowView.findViewById(R.id.des);
         productDisc.setText(kidsItem.get(position).getDescreption());
 
+        ImageView image = (ImageView) rowView.findViewById(R.id.image);
+        image.setImageBitmap(StringToBitMap(kidsItem.get(position).getImage()));
+
         return rowView;
+    }
+
+    public Bitmap StringToBitMap(String image){
+        try{
+            byte [] encodeByte= Base64.decode(image,Base64.DEFAULT);
+            Bitmap bitmap= BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+            return bitmap;
+        }catch(Exception e){
+            e.getMessage();
+            return null;
+        }
     }
 }

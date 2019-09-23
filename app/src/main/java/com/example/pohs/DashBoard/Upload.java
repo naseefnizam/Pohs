@@ -133,6 +133,7 @@ public class Upload extends AppCompatActivity {
             String id = databaseRefUploadItem.push().getKey();
             UploadModal uploadModal = new UploadModal();
             uploadModal.setId(id);
+            uploadModal.setProductName(ProName);
             uploadModal.setDescreption(Des);
             uploadModal.setProductID(ProID);
             uploadModal.setProductPrice(ProPrice);
