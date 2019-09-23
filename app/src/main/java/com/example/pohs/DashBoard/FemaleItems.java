@@ -10,9 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.pohs.DashBoard.Adepters.femaleItemAdepter;
-import com.example.pohs.DashBoard.Adepters.storeItemAdepter;
-import com.example.pohs.DashBoard.Modals.femaleItemModal;
 
+import com.example.pohs.DashBoard.Modals.UploadModal;
 import com.example.pohs.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,7 +31,7 @@ public class FemaleItems extends Fragment {
     public FemaleItems() {
         // Required empty public constructor
     }
-    ArrayList<femaleItemModal> femaleitem = new ArrayList<>();
+    ArrayList<UploadModal> femaleitem = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,8 +49,10 @@ public class FemaleItems extends Fragment {
 
                     for (DataSnapshot ds : dataSnapshot.getChildren())
                     {
-                        femaleItemModal spacecraft=ds.getValue(femaleItemModal.class);
-                        femaleitem.add(spacecraft);
+                        UploadModal spacecraft=ds.getValue(UploadModal.class);
+                        assert spacecraft != null;
+                        if("Girls Items".equals(spacecraft.getProductType()))
+                            femaleitem.add(spacecraft);
                     }
 
                     femaleItemAdepter listAdapter = new femaleItemAdepter(FemaleItems.this.getContext(),R.id.female_listview,femaleitem );

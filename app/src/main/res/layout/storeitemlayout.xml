@@ -7,9 +7,9 @@
     android:background="@drawable/store">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="138dp"
-        android:layout_height="193dp"
+        android:id="@+id/image"
+        android:layout_width="136dp"
+        android:layout_height="225dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/pname"
-        android:layout_width="175dp"
+        android:layout_width="154dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
@@ -68,14 +68,14 @@
         app:layout_constraintTop_toBottomOf="@+id/price" />
 
     <TextView
-        android:id="@+id/disc"
+        android:id="@+id/des"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:text="Descreption"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:text="Size"
+        app:layout_constraintEnd_toEndOf="@+id/type"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/type"
         app:layout_constraintTop_toBottomOf="@+id/type" />
 
@@ -86,7 +86,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="Name :"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -95,9 +95,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Price :"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView7"
@@ -105,9 +105,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Size :"
-        app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView8"
@@ -124,25 +124,57 @@
         android:id="@+id/selectmale"
         android:layout_width="130dp"
         android:layout_height="38dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="Delete"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/disc"
-        app:layout_constraintTop_toBottomOf="@+id/disc" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/des" />
 
     <Button
         android:id="@+id/editstore"
         android:layout_width="117dp"
         android:layout_height="25dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="23dp"
         android:background="@android:color/holo_green_dark"
         android:text="Edit"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/selectmale"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/disc"
-        app:layout_constraintTop_toBottomOf="@+id/disc" />
+        app:layout_constraintStart_toStartOf="@+id/des"
+        app:layout_constraintTop_toBottomOf="@+id/des"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Descreption"
+        app:layout_constraintEnd_toEndOf="@+id/des"
+        app:layout_constraintStart_toStartOf="@+id/des"
+        app:layout_constraintTop_toBottomOf="@+id/des" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pro ID:"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Type:"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 </android.support.constraint.ConstraintLayout>

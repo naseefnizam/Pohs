@@ -7,18 +7,17 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.pohs.DashBoard.Modals.maleItemModal;
-import com.example.pohs.DashBoard.Modals.storeItemModal;
+import com.example.pohs.DashBoard.Modals.UploadModal;
 import com.example.pohs.R;
 
 import java.util.ArrayList;
 
-public class maleItemAdepter extends ArrayAdapter<maleItemModal> {
+public class maleItemAdepter extends ArrayAdapter<UploadModal> {
 
-    private ArrayList<maleItemModal> maleItem;
+    private ArrayList<UploadModal> maleItem;
     private LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-    public maleItemAdepter(Context context, int resource, ArrayList<maleItemModal> storeItem) {
+    public maleItemAdepter(Context context, int resource, ArrayList<UploadModal> storeItem) {
         super(context, resource,storeItem);
         this.maleItem = storeItem;
     }
@@ -37,10 +36,10 @@ public class maleItemAdepter extends ArrayAdapter<maleItemModal> {
         price.setText(maleItem.get(position).getProductSize());
 
         TextView productType = (TextView) rowView.findViewById(R.id.type);
-        productType.setText(maleItem.get(position).getDescreption());
+        productType.setText(maleItem.get(position).getProductType());
 
-        TextView productDisc = (TextView) rowView.findViewById(R.id.disc);
-        productDisc.setText(maleItem.get(position).getProductType());
+        TextView productDisc = (TextView) rowView.findViewById(R.id.des);
+        productDisc.setText(maleItem.get(position).getDescreption());
 
         return rowView;
     }

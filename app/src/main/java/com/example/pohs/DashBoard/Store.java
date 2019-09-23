@@ -4,7 +4,6 @@ package com.example.pohs.DashBoard;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import android.widget.ListView;
 
 import com.example.pohs.DashBoard.Adepters.storeItemAdepter;
 import com.example.pohs.DashBoard.Modals.UploadModal;
-import com.example.pohs.DashBoard.Modals.storeItemModal;
 import com.example.pohs.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -41,7 +38,7 @@ public class Store extends Fragment {
 
 
     private ListView storeList ;
-    ArrayList<storeItemModal> storeitem = new ArrayList<>();
+    ArrayList<UploadModal> storeitem = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,7 +56,7 @@ public class Store extends Fragment {
 
                     for (DataSnapshot ds : dataSnapshot.getChildren())
                     {
-                        storeItemModal spacecraft=ds.getValue(storeItemModal.class);
+                        UploadModal spacecraft=ds.getValue(UploadModal.class);
                         storeitem.add(spacecraft);
                     }
 

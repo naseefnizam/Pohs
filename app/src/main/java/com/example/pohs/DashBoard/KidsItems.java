@@ -9,10 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.pohs.DashBoard.Adepters.femaleItemAdepter;
 import com.example.pohs.DashBoard.Adepters.kidsItemAdepter;
-import com.example.pohs.DashBoard.Modals.femaleItemModal;
-import com.example.pohs.DashBoard.Modals.kidsItemModal;
+import com.example.pohs.DashBoard.Modals.UploadModal;
 import com.example.pohs.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,7 +31,7 @@ public class KidsItems extends Fragment {
         // Required empty public constructor
     }
 
-    ArrayList<kidsItemModal> kidsitem = new ArrayList<>();
+    ArrayList<UploadModal> kidsitem = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -51,7 +49,9 @@ public class KidsItems extends Fragment {
 
                     for (DataSnapshot ds : dataSnapshot.getChildren())
                     {
-                        kidsItemModal spacecraft=ds.getValue(kidsItemModal.class);
+                        UploadModal spacecraft=ds.getValue(UploadModal.class);
+                        assert spacecraft != null;
+                        if("Kids Items".equals(spacecraft.getProductType()))
                         kidsitem.add(spacecraft);
                     }
 

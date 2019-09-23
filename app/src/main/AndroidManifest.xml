@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pohs">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/startlogo"
@@ -9,12 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.pohs.DashBoard.SuccessMessage"></activity>
-        <activity android:name="com.example.pohs.DashBoard.Upload" />
-        <activity android:name="com.example.pohs.DashBoard.ShopDashBoard" />
-        <activity android:name="com.example.pohs.DashBoard.CustomerDashBoard" />
+        <activity android:name=".Search.searchViewActivity"></activity>
+        <activity android:name=".Search.Searchfirst" />
+        <activity android:name=".DashBoard.SuccessMessage" />
+        <activity android:name=".DashBoard.Upload" />
+        <activity android:name=".DashBoard.ShopDashBoard" />
+        <activity android:name=".DashBoard.CustomerDashBoard" />
         <activity
-            android:name="com.example.pohs.DashBoard.MainActivity"
+            android:name=".DashBoard.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

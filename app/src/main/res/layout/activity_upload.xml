@@ -120,7 +120,7 @@
         android:text="ADD" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/imguploadbtn"
         android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/addbtn"
@@ -137,32 +137,31 @@
         android:id="@+id/button3"
         android:layout_width="188dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-3dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="41dp"
+        android:layout_below="@+id/imguploadbtn"
+        android:layout_alignStart="@+id/imguploadbtn"
+        android:layout_alignEnd="@+id/imguploadbtn"
+        android:layout_alignBottom="@+id/imgview"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="27dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="Cancel"
         android:textColor="@android:color/background_light" />
 
-    <ImageButton
-        android:id="@+id/imgbtn"
+    <ImageView
+        android:id="@+id/imgview"
         android:layout_width="190dp"
         android:layout_height="200dp"
         android:layout_below="@+id/pDescription"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="207dp"
-        android:layout_marginBottom="42dp"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:onClick="imgbutton"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="43dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <Spinner
         android:id="@+id/dresstype"

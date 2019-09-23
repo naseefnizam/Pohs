@@ -7,17 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 
 import com.example.pohs.DashBoard.Adepters.maleItemAdepter;
-import com.example.pohs.DashBoard.Adepters.storeItemAdepter;
-import com.example.pohs.DashBoard.Modals.maleItemModal;
 
-import com.example.pohs.DashBoard.Modals.storeItemModal;
+
+import com.example.pohs.DashBoard.Modals.UploadModal;
 import com.example.pohs.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,7 +35,7 @@ public class MaleItems extends Fragment {
     }
 
     private ListView storeList ;
-    ArrayList<maleItemModal> maleitem = new ArrayList<>();
+    ArrayList<UploadModal> maleitem = new ArrayList<>();
 
 
     @Override
@@ -59,8 +55,10 @@ public class MaleItems extends Fragment {
 
                     for (DataSnapshot ds : dataSnapshot.getChildren())
                     {
-                        maleItemModal spacecraft=ds.getValue(maleItemModal.class);
-                        maleitem.add(spacecraft);
+                        UploadModal spacecraft=ds.getValue(UploadModal.class);
+                        assert spacecraft != null;
+                        if("Boys Items".equals(spacecraft.getProductType()))
+                            maleitem.add(spacecraft);
                     }
 
                    maleItemAdepter listAdapter = new maleItemAdepter(MaleItems.this.getContext(),R.id.MaleItemLV,maleitem);
